@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
@@ -59,7 +59,7 @@ export const login = async (req, res) => {
       password,
       user?.password || ""
     );
-    
+
     if (!user || !isPasswordCorrect) {
       console.log("Incorrect Password");
       return res.status(400).json({ error: "Invalid credentials" });
