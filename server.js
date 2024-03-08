@@ -13,7 +13,7 @@ dotenv.config();
 const corsOptions = {
   origin: [
     "https://sparkx-8dem.onrender.com/",
-    "http://localhost:3001",
+    "http://localhost:3005",
     "http://localhost:3000",
   ],
   credentials: true,
