@@ -1,9 +1,10 @@
 import express from "express";
-import { getUsers } from "../controllers/user.js";
+import { getUsers, getUser } from "../controllers/user.js";
 import authorize from "../middleware/authorize.js";
 
 const router = express.Router();
 
-router.get("/", authorize, getUsers);
+router.get("/users", authorize, getUsers);
+router.get("/", authorize, getUser);
 
 export default router;
