@@ -28,7 +28,7 @@ app.use("/auth", auth);
 app.use("/users", user);
 app.use("/messages", message);
 
-app.listen(process.env.PORT, () => {
+server.listen(process.env.PORT, () => {
   console.log(`server running on port ${process.env.port}`);
   mongoose
     .connect(process.env.MONGODB_URI)
