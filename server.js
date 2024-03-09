@@ -12,8 +12,8 @@ dotenv.config();
 
 const corsOptions = {
   origin: [
-    "https://sparkx-frontend.onrender.com/",
-    "https://sparkx-backend.onrender.com/",
+    "https://sparkx-frontend.onrender.com",
+    "https://sparkx-backend.onrender.com",
   ],
   optionsSuccessStatus: 200,
 };
