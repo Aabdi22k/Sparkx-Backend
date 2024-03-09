@@ -10,7 +10,15 @@ import { app, server } from "./socket/socket.js";
 
 dotenv.config();
 
-app.use(cors());
+const corsOptions = {
+  origin: [
+    "https://sparkx-frontend.onrender.com/",
+    "https://sparkx-backend.onrender.com/",
+  ],
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(express.json());
 
