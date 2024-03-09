@@ -10,7 +10,7 @@ import { app, server } from "./socket/socket.js";
 
 dotenv.config();
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 
