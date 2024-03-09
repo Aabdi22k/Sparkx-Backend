@@ -14,6 +14,7 @@ const corsOptions = {
   origin: [
     "https://sparkx-frontend.onrender.com",
     "https://sparkx-backend.onrender.com",
+    "http://localhost:8081",
   ],
   optionsSuccessStatus: 200,
 };
