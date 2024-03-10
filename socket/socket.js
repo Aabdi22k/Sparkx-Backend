@@ -7,7 +7,11 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://sparkx-frontend.onrender.com", "http://localhost:8081"],
+    origin: [
+      "https://sparkx-frontend.onrender.com",
+      "http://localhost:8081",
+      "https://sparkx-frontend.vercel.app/",
+    ],
     methods: ["GET", "POST"],
   },
 });
