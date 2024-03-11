@@ -16,7 +16,7 @@ const corsOptions = {
     "https://sparkx-backend.onrender.com",
     "http://localhost:8081",
     "http://localhost:3000",
-    "https://sparkx-frontend.vercel.app/",
+    "https://sparkx-frontend.vercel.app",
   ],
   optionsSuccessStatus: 200,
 };
