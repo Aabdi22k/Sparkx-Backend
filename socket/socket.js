@@ -10,6 +10,7 @@ const io = new Server(server, {
     origin: [
       "https://sparkx-frontend.onrender.com",
       "http://localhost:8081",
+      "http://localhost:3000",
       "https://sparkx-frontend.vercel.app/",
     ],
     methods: ["GET", "POST"],
