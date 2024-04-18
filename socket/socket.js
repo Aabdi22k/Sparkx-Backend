@@ -1,5 +1,6 @@
 import { Server } from "socket.io";
 import http from "http";
+import { createProxyMiddleware } from "http-proxy-middleware";
 import express from "express";
 
 const app = express();
