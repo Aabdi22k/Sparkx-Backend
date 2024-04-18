@@ -4,6 +4,14 @@ import express from "express";
 
 const app = express();
 
+app.use(
+  '/api',
+  createProxyMiddleware({
+    target: 'http://localhost:3005',
+    changeOrigin: true,
+  })
+);
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
