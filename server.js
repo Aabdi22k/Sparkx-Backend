@@ -18,6 +18,8 @@ const corsOptions = {
     "http://localhost:3000",
     "https://sparkx-frontend.vercel.app",
     "https://sparkx.ddns.net",
+    "http://localhost:3001",
+    "https://sparkxchat.vercel.app"
   ],
   optionsSuccessStatus: 200,
 };

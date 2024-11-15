@@ -21,7 +21,9 @@ const io = new Server(server, {
       "http://localhost:8081",
       "http://localhost:3000",
       "https://sparkx-frontend.vercel.app",
-      "https://sparkx.ddns.net"
+      "https://sparkx.ddns.net",
+      "http://localhost:3001",
+      "https://sparkxchat.vercel.app"
     ],
     methods: ["GET", "POST"],
   },

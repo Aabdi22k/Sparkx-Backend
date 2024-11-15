@@ -1,5 +1,5 @@
 import User from "../models/User.js";
-import Message from "../models/Message.js";
+import Conversation from '../models/Conversation.js'
 export const getUsers = async (req, res) => {
   try {
     const userId = req.userId;
@@ -14,11 +14,17 @@ export const getUsers = async (req, res) => {
 export const getMyConversations  = async (req, res) => {
   try {
     const userId = req.userId;
-    const messages = await Message.find({ receiverId: userId });
+    const conversations = await Conversation.find();
     const users = []
-    messages.forEach(message => {
-      User.findById(message.senderId).then(user => users.push(user))
-    });
+    for (let conversation of conversations) {
+      let participants = conversation.participants;
+      if (!participants.includes(userId)) continue
+      let i = participants.indexOf(userId)
+      participants.splice(i, 1)
+      let user = await User.findById(participants[0]).select("-password")
+      users.push(user)
+    }
+    
 
     res.status(200).json({users});
   } catch (error) {
